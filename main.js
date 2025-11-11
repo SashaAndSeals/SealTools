@@ -4,4 +4,5 @@ window.onload = function() {
 };
 
 document.getElementById("SettingsButton").onclick = function(){
+    document.getElementById("SettingsTitle").style = "display: block;"
 }
