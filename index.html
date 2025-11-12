@@ -3,15 +3,36 @@
     <head>
         <title id="Title">&zwnj;</title>
         <link id="Favicon" rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">        
+        <style>
+            .ToolButton {
+                width: 100%;
+                height: 3vh;
+                border: none;
+                background-color: #dddddd;
+            }
+
+            .ToolButton:hover{
+                background-color: #cccccc;
+            }
+        </style>
     </head>
     <body>
-        <div id="SideBar" style="width: 7.5%; height: 100vh; position:absolute; top:0; left:0; background-color: #dddddd;">
-            <h3 style="text-align: center;">SealTools</h3>
+        <div id="SideBar" style="width: 7.5vw; height: 100vh; position:absolute; top:0; left:0; background-color: #dddddd;">
+            <h3 style="text-align: center; background-color: #008080; margin: 0; padding: 2vh;">SealTools</h3>
+            <button class="ToolButton" id="ToolHTMLRenderer">HTML Renderer</button>
         </div>
-        <button id="SettingsButton" style="position: absolute; top:min(2vw, 2vh); right: min(2vw, 2vh);">Settings</button>
-        <div id="Settings" style="display: none; width: 50vw; height: 50vh;">
-            <label for="SettingsTitle">Page Title:</label><input type="text" id="SettingsTitle" name="SettingsTitle">
+        <button id="SettingsOpenButton" style="position: absolute; top:min(2vw, 2vh); right: min(2vw, 2vh);">Settings</button>
+        <div id="Settings" style="display: none">
+            <div style="position: absolute; top: min(1vw,1vh); right: min(1vw,1vh);">
+                <button id="SettingsSaveButton">Save</button>
+                <button id="SettingsCloseButton">Close</button>
+            </div>
+            <label for="SettingsTitle">Page Title: </label><input type="text" id="SettingsTitle" name="SettingsTitle"><br>
+            <label for="SettingsFavicon">Page Favicon: </label><input type="text" id="SettingsFavicon" name="SettingsFavicon"><br>
         </div>  
+        <!--<div id="Tool" style="width: 90vw; height: 90 vh; position: absolute; top: 5vh; left: 8.75vw;">
+        </div>-->
+        <iframe id="Tool" style="width: 90vw; height: 90vh; position: absolute; top: 5vh; left: 8.75vw;"></iframe>
         <script src="main.js"></script>
     </body>
 <html>
